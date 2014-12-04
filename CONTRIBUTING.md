@@ -116,12 +116,12 @@ websites:
     url: https://www.site.com/
     twitter: SiteTwitter
     img: site.png
-    tfa: true
-    sms: true
-    email: true
-    phone: true
-    software: true
-    hardware: true
+    tfa: 'Yes'
+    sms: 'Yes'
+    email: 'Yes'
+    phone: 'Yes'
+    software: 'Yes'
+    hardware: 'Yes'
     doc: <link to site 2FA documentation>
 ```
 Fields `name:`, `url:`, `img:`, `tfa:` are required for all entries. If available, `twitter:` should be included. If a site provides tfa, `doc:` field is strongly encouraged. Other fields should be included as appropriate.
@@ -139,9 +139,9 @@ website. There are 4 ways to customize how it is displayed:
       url: https://www.site.com/
       twitter: SiteTwitter
       img: site.png
-      tfa: true
-      sms: true
-      exceptions: true
+      tfa: 'Yes'
+      sms: 'Yes'
+      exceptions: 'Yes'
       doc: <link to site 2FA documentation>
    ```
 2. The message can be replaced with a custom set of words:
@@ -151,8 +151,8 @@ website. There are 4 ways to customize how it is displayed:
       url: https://www.site.com/
       twitter: SiteTwitter
       img: site.png
-      tfa: true
-      sms: true
+      tfa: 'Yes'
+      sms: 'Yes'
       exceptions:
           text: "Specific text goes here."
       doc: <link to site 2FA documentation>
@@ -165,10 +165,10 @@ website. There are 4 ways to customize how it is displayed:
       url: https://www.site.com/
       twitter: SiteTwitter
       img: site.png
-      tfa: true
-      sms: true
+      tfa: 'Yes'
+      sms: 'Yes'
       exceptions:
-          link: true
+          link: 'Yes'
       doc: <link to site 2FA documentation>
    ```
 4. 2 and 3 can be combined into:
@@ -178,10 +178,10 @@ website. There are 4 ways to customize how it is displayed:
       url: https://www.site.com/
       twitter: SiteTwitter
       img: site.png
-      tfa: true
-      sms: true
+      tfa: 'Yes'
+      sms: 'Yes'
       exceptions:
-          link: true
+          link: 'Yes'
           text: "Specific text can go here as well."
       doc: <link to site 2FA documentation>
    ```
@@ -230,18 +230,18 @@ For context, check out the discussion in [#242][242].
 Rather than split out providers on the main page, we elected to keep the main
 page clean and add another page dedicated to 2fa providers.
 
-To add a new provider simply add to the `providers.yml` file, marking `true`
+To add a new provider simply add to the `providers.yml` file, marking `'Yes'`
 where appropriate.
 
 ```yml
   - name: Company Name
     url: https://example.com
     img: company.png
-    sms: true
-    email: true
-    phone: true
-    software: true
-    hardware: true
+    sms: 'Yes'
+    email: 'Yes'
+    phone: 'Yes'
+    software: 'Yes'
+    hardware: 'Yes'
 ```
 
 [242]: https://github.com/jdavis/twofactorauth/issues/242
